@@ -1,0 +1,81 @@
+
+
+.fade-in-blur {
+  filter: blur(5px); /* Reduced blur for easier visibility */
+}
+
+.reveal .fragment.fade-in-blur.visible {
+  filter: blur(1px);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.5s ease-out;
+}
+
+.reveal .fragment.visible.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hauptfarben */
+.reveal {
+  color: #003056;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  color: #DF7E50;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  color: #003056;
+}
+
+.reveal .slides a,
+.reveal .slides a:visited {
+  color: #DF7E50 !important;
+}
+
+/* Logo oben rechts – größer und weiter außen */
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+  bottom: unset !important;
+  left: unset !important;
+  top: 5px;
+  right: 12px;
+  height: 140px !important;
+  width: 330px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+.slide-number, .reveal.has-logo .slide-number {
+  bottom: 14px !important;
+  right: 50px !important;
+  top: unset !important;
+  color: #DF7E50 !important;
+}
+
+/* Left-align the title and subtitle on the title slide */
+.reveal .quarto-title-block .title,
+.reveal .quarto-title-block .subtitle {
+  text-align: left !important;
+  margin-left: 0 !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+
+/* Footer: slightly bigger and bold */
+.reveal .footer {
+  font-size: 0.7em !important;
+color: #0030568C !important
+}
+
+/* Slide number: slightly bigger and bold */
+.reveal .slide-number {
+  font-size: 0.45em !important;
+}

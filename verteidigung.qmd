@@ -1,0 +1,1336 @@
+---
+title: "Muslim TikTok in Germany"
+subtitle: "A Community Navigating Religion, Racism, and Radicalization in the Digital Age"
+author: "Nader Hotait"
+date: "06 May, 2025"
+date-format: long
+format: 
+  revealjs:
+    transition: slide
+    background-transition: fade
+    css: style.css
+    slide-number: true    
+    logo: Logo_UMA_EN_RGB.png
+    menu: true
+    footer: "Doctoral Viva"
+    toc: false
+    mermaid:
+      theme: default
+    mermaid-format: png
+bibliography: references.bib
+---
+
+# The Background
+
+::: footer
+Introduction
+:::
+
+## The Gensis of this Dissertation {auto-animate="true"}
+
+::::::: columns
+:::: {.column width="60%"}
+::: incremental
+-   [D:Islam Project: German Islam as an alternative to "Islamism"?](https://www.radis-forschung.de/projekte/dislam)
+-   Funded by German Federal Ministry of Education and Research
+-   Emergence of a so called "German Islam" between anti-Muslim racism and "Islamism"
+-   3 modules, 2 PIs, 5 research associates, 2 student assistants
+:::
+::::
+
+:::: {.column width="40%"}
+::: r-stack
+![](output_0.png){.fragment width="700" height="300"}
+
+![](output_1.png){.fragment width="500" height="450"}
+
+![](output_3.png){.fragment width="500" height="450"}
+
+![](output_4.png){.fragment width="500" height="450"}
+
+![](output_2.png){.fragment width="700" height="300"}
+
+![](output_5.png){.fragment width="700" height="300"}
+:::
+::::
+:::::::
+
+::: footer
+Introduction
+:::
+
+## The Gensis of this Dissertation {auto-animate="true"}
+
+:::::: columns
+::: {.column width="40%"}
+-   [D:Islam Project: German Islam as an alternative to "Islamism"?](https://www.radis-forschung.de/projekte/dislam)
+-   Funded by the German Federal Ministry of Education and Research
+:::
+
+:::: {.column width="60%"}
+::: incremental
+-   [RaPoTik Project: Radicalization Potentials on TikTok](https://www.bim.hu-berlin.de/de/projekte/kurztitel)
+-   Funded by Berlin State Commission against Violence
+-   Objectives:
+    -   Prevalence and effect of extremist material on TikTok
+    -   Automated TikTok analysis tool
+:::
+::::
+::::::
+
+::: footer
+Introduction
+:::
+
+## Muslims, Media, and Extremism
+
+::: {.fragment .slide-in}
+![](muzrad.png){width="80%"}
+:::
+
+::: footer
+Introduction
+:::
+
+## "Islamism" and Online Extremism
+
+***A journey***
+
+::: incremental
+-   **1999** Columbine High School massacre: *"first mass shooting of the internet age"* [@peterson2023, 2]
+-   **2001** 9/11 attacks: Al-Qaeda and the *"electronic jihad"* [@rudner_electronic_2017]
+-   **2014** Emergence of ISIS: A strategic social or. *digital media campaign* [e.g. @awan_cyber-extremism_2017]
+:::
+
+::: footer
+Introduction
+:::
+
+## "Islamism" and Online Extremism
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(plotly)
+
+df <- read_csv("Scopus-10-Analyze-Year.csv")
+
+ggplotly(ggplot(df, aes(x = YEAR, y = n)) +
+  geom_point(size = 3) + 
+  geom_line(size = 1) +
+  theme_minimal(base_size = 14) +
+  labs(
+    y = "Number of Publications", 
+    x = "Years",
+    caption = "Query : TITLE-ABS-KEY(islam* OR muslim*)\nAND TITLE-ABS-KEY(online* OR internet* OR digital*)\nAND TITLE-ABS-KEY(radical* OR extrem* OR violent* OR terror*)"
+  ) +
+  scale_x_continuous(
+    breaks = seq(1999, 2023, by = 2),
+    limits = c(1999, 2024),
+    expand = expansion(mult = c(0.02, 0.02))
+  ) +
+  theme(
+    # Position caption in the overall plot area
+    plot.caption.position = "plot",
+    # Align the caption text to the right side (use hjust=0 for left)
+    plot.caption = element_text(hjust = 0)
+  )
+)
+```
+
+::: footer
+Introduction
+:::
+
+## "Islamism" and Online Extremism
+
+::::::: columns
+:::: {.column width="50%"}
+::: {.fragment .slide-up}
+@whine1999
+
+![](1999_paper.png){width="90%"}
+:::
+::::
+
+:::: {.column width="50%"}
+::: {.fragment .slide-up}
+@chatfield2015\
+![](2015_paper.png){width="90%"}
+:::
+::::
+:::::::
+
+::: footer
+Introduction
+:::
+
+## Aftermath of the "War on Terror" {auto-animate="true"}
+
+### The securitization of Muslims
+
+::: incremental
+-   Construction of Muslims as a "suspect community" [@kundnani_radicalisation_2012; @kundnani2014]
+-   German Muslims under "Generalverdacht" [@attia2021; @andersen_attitudes_2018; @halm_current_2013]
+-   Resulting in increased surveillance, discrimination, negative media and policing bias, etc.
+:::
+
+::: footer
+Introduction
+:::
+
+## Aftermath of the "War on Terror" {auto-animate="true"}
+
+### The securitization of Muslims
+
+-   Construction of Muslims as a "suspect community" [@kundnani_radicalisation_2012; @kundnani2014]
+-   German Muslims under "Generalverdacht" [@attia2021; @andersen_attitudes_2018; @halm_current_2013]
+-   Part of the omnipresence of discrimination and racism faced by Muslims in Germany from channels not specifically linked to extremism[e.g. @unabhängigerexpertenkreismuslimfeindlichkeit2023]
+
+::: footer
+Introduction
+:::
+
+## Muslims on Social Media {auto-animate="true"}
+
+### Two Research Venues
+
+:::::::: columns
+:::::: {.column width="100%"}
+::: incremental
+-   *Extremist use of social media, for:*
+    -   Recruitment and organization\
+    -   Propagandization\
+    -   Radicalization\
+:::
+
+:::: fragment
+::: {style="margin-top: 0.25em;"}
+→ **Focus on the affordances of social media to create and disseminate content at low to no cost, create visibility, pseudonymization, global interconnectedness, fast communication**
+:::
+::::
+::::::
+
+::: {.column width="0%"}
+<!-- (Empty for first slide) -->
+:::
+::::::::
+
+::: footer
+Introduction
+:::
+
+## Muslims on Social Media {auto-animate="true"}
+
+### Two Research Venues
+
+:::::: columns
+:::: {.column width="50%"}
+::: {.fragment .fade-in-blur style="color: #0030568C;"}
+→ Focus on the affordances of social media to **create and disseminate content at low to no cost, create visibility, global interconnectedness, fast communication, and creating alternative spaces**
+:::
+::::
+
+::: {.column width="50%"}
+<ul>
+
+<li class="fragment" style="color:#DF7E50">
+
+***Use of social media, for:***
+
+</li>
+
+<li class="fragment" style="color:#DF7E50">
+
+Community building and knowledge exchange
+
+</li>
+
+<li class="fragment" style="color:#DF7E50">
+
+Creating counter-narratives, mobilization, and activism
+
+</li>
+
+<li class="fragment" style="color:#DF7E50">
+
+**As a consequence of marginalization!**
+
+</li>
+
+</ul>
+:::
+::::::
+
+::: footer
+Introduction
+:::
+
+## TikTok and the "Extremism Problem"?
+
+::: r-stack
+![](tiktok-1.png){.fragment width="500"}
+
+![](tiktok-2.png){.fragment width="500"}
+
+![](tiktok-3.png){.fragment width="500"}
+
+![](tiktok-4.png){.fragment width="500"}
+
+![](tiktok-5.png){.fragment width="700"}
+
+![](tiktok-6.png){.fragment width="800"}
+
+![](tiktok-7.png){.fragment width="900"}
+
+![](tiktok-8.png){.fragment width="500"}
+
+![](tiktok-9.png){.fragment width="500"}
+
+![](tiktok-10.png){.fragment width="600"}
+
+![](tiktok-11.png){.fragment width="700"}
+:::
+
+::: footer
+Introduction
+:::
+
+## Suspicious for good reasons? {.smaller}
+
+::::::::: columns
+::::: {.column width="50%"}
+### TikTok
+
+::: {.fragment fragment-index="1"}
+-   Existence of extremist material [see @hartwig_monitoring_2023; @hohner2024]
+:::
+
+::: {.fragment fragment-index="3"}
+-   Algorithmic content suggestion based on interests and virality [see @tiktok_how_2020]
+:::
+:::::
+
+::::: {.column width="50%"}
+### Research
+
+::: {.fragment fragment-index="2"}
+-   Consumption of such content could lead to radicalization [see @hassan_exposure_2018]
+:::
+
+::: {.fragment fragment-index="4"}
+-   Possibly opening rabbit holes, allowing exposure to extremist content [e.g. @hotait_swipe_2022]
+:::
+:::::
+:::::::::
+
+::: footer
+Introduction
+:::
+
+## Excursion: TikTok rabbit hole?
+
+::: panel-tabset
+### Experiment
+
+```{r}
+library("rjson")
+library("tidyverse")
+library("purrr")
+library("lubridate")
+library("readxl")
+library("quanteda")
+library("tidytext")
+library("magrittr")
+library("plotly")
+library("ggpubr")
+library("geomtextpath")
+library("quanteda.textmodels")
+library("quanteda.textplots")
+library("quanteda.textstats")
+library("kableExtra")
+
+df <- read_xlsx("video_list.xlsx")
+df <- df[1:848, ]
+
+## DTM
+corpus <- corpus(df, text_field = "comment")
+
+# Get the document names from the corpus
+doc_names <- docnames(corpus)
+
+my_tokens <- tokens(corpus)
+my_dtm <- dfm(my_tokens)
+dtm_df <- tidy(my_dtm)
+
+# Add the document names to your df
+df$document <- doc_names
+
+# Now try the left_join
+term_matrix <- left_join(dtm_df, select(df, date, link, document), by = "document")
+
+
+term_matrix <- term_matrix[term_matrix$term != ";",]
+term_matrix$Video <- as.numeric(gsub("text", "", term_matrix$document))
+
+termss<- data.frame(table(term_matrix$term))
+
+names(termss) <- c("Themen", "Häufigkeit")
+termss <- termss[order(termss$Häufigkeit, decreasing = T),]
+
+extra <- term_matrix
+extra <- extra %>%
+  mutate(start = case_when(
+  Video <= 296 ~ 0,
+  Video <= 385 ~ 296,
+  TRUE ~ 848
+))
+
+extra <- extra %>%
+  mutate(end = case_when(
+  Video <= 296 ~ 296,
+  Video <= 385 ~ 385,
+  TRUE ~ 848
+))
+
+extra <- extra %>%
+  mutate(colors = case_when(
+  Video <= 296 ~ 1,
+  Video <= 385 ~ 2,
+  TRUE ~ 3
+))
+
+first <- ggplot(extra, aes(x = as.factor(Video), y = term, color = term, text = "")) +
+  geom_point(size = 1, aes(text = paste('Video: ', Video,
+                                        '<br>Subject: ', term))) +
+  theme(axis.text.x = element_blank()) +
+  guides(color="none") +
+  xlab("Video Chronology") +
+  ylab("") +
+  theme(axis.text = element_text(size = 5)) +
+  annotate("rect", xmin=0, xmax=296, ymin=0, ymax=Inf, alpha=0.1, fill="red")  +
+  annotate("rect", xmin=296, xmax=385, ymin=0, ymax=Inf, alpha=0.1, fill="aquamarine") +
+  annotate("rect", xmin=385, xmax=Inf, ymin=0, ymax=Inf, alpha=0.1, fill="cornflowerblue")
+
+first <- ggplotly(first, tooltip = "text")
+
+first <- first %>% layout(showlegend = FALSE)
+
+first
+```
+
+### Religion
+
+```{r}
+islm <- c("nasheed_ext", "rad_bezug")
+
+islm_df <- term_matrix$document[grep(paste(islm, collapse="|"), term_matrix$term)]
+islm_df <- term_matrix[term_matrix$document %in% islm_df,]
+
+islm_df <- islm_df %>%
+  mutate(to_highlight = case_when(
+    term %in% islm~ 1L,
+    TRUE ~ 0L
+  ))
+
+q <- ggplot(islm_df, aes(x = as.factor(Video), y = term, color = to_highlight, text = "")) +
+  geom_point(aes(shape = as.factor(to_highlight), size=2, text = paste('Video: ', Video,
+                                                                       '<br>Subject: ', term))) +
+  # theme(axis.text.x = element_blank()) +
+  guides(color="none", shape = "none", size = "none") +
+  xlab("Video Chronology") +
+  ylab("")
+
+q <- ggplotly(q, tooltip = "text")
+
+q <- q %>% layout(showlegend = FALSE)
+
+q <- q %>%
+  layout(hovermode = "x unified")
+
+q
+```
+
+### Far-Right
+
+```{r}
+rw <- c("wehrmacht", "turkish_nationalism", "right_wing", "misogyny", "anti_feminism", "greek_nationalism", "anti_ukraine")
+
+rw_df <- term_matrix$document[grep(paste(rw, collapse="|"), term_matrix$term)]
+rw_df <- term_matrix[term_matrix$document %in% rw_df,]
+
+rw_df <- rw_df %>%
+  mutate(to_highlight = case_when(
+    term %in% rw ~ 1L,
+    TRUE ~ 0L
+  ))
+
+p <- ggplot(rw_df, aes(x = as.factor(Video), y = term, color = to_highlight, text ="")) +
+  geom_point(aes(shape = as.factor(to_highlight), size=2, text = paste('Video: ', Video,
+                                                                       '<br>Subject: ', term))) +
+  # theme(axis.text.x = element_blank()) +
+  guides(color="none", shape = "none", size = "none") +
+  xlab("Video Chronology") +
+  ylab("")
+
+p <- ggplotly(p, tooltip = "text")
+
+p <- p %>% layout(showlegend = FALSE)
+p <- p %>%
+  layout(hovermode = "x unified")
+p
+```
+:::
+
+::: footer
+Introduction
+:::
+
+## Suspicious for good reasons? {.smaller}
+
+::::::: columns
+:::: {.column width="50%"}
+### TikTok
+
+-   Existence of extremist material [see @hartwig_monitoring_2023; @hohner2024]
+-   Algorithmic content suggestion based on interests and virality [see @tiktok_how_2020]
+
+::: {.fragment fragment-index="1"}
+-   Over one billion [@pappas_1_2021] mostly young users [@bestvater_how_2024; @koch_ergebnisse_2023]
+:::
+::::
+
+:::: {.column width="50%"}
+### Research
+
+-   Consumption of such content could lead to radicalization [see @hassan_exposure_2018]
+-   Possibly opening rabbit holes, allowing exposure to extremist content [e.g. @hotait_swipe_2022]
+
+::: {.fragment fragment-index="2"}
+-   Young people radicalize more often [@acevedo_religion_2015; @ellis_risk_2021]
+:::
+::::
+:::::::
+
+::: {.fragment fragment-index="3"}
+**Systematic and comprehensive studies of potentially radical content produced in the (German) Muslim subspace on TikTok, the practice of its consumption and the role of the algorithm as mediator are largely absent.**
+:::
+
+::: footer
+Introduction
+:::
+
+## What about the good tho? {.smaller auto-animate="true"}
+
+### Social Media generally
+
+::: incremental
+-   Muslims (mostly) use social media for quite mundaine pursuits: food, beauty, and lifestyle [@bunt_hashtag_2018; @karakavak_when_2022; @nisa_internet_2021; @tornberg_muslims_2016]
+-   The Internet as a (alternative) space for self-expression, visibility, and community building in the context of marginalization and a discriminatory society [@bahfen_individual_2018; @pennington_social_2018; @piela_muslim_2012; @rozehnal_cyber_2022]
+-   Opportunities for political activism against anti-Muslim racism, including the securitization of Muslims [@aydin_laughing_2023; @civila_social_2023; @downing_theorising_2022]
+-   Particularly empowering for Muslim women, to negotiate religious norms and cultural practices [@akou_interpreting_2010; @pennington_making_2018; @piela_muslim_2010; @piela_muslim_2012]
+:::
+
+::: footer
+Introduction
+:::
+
+## What about the good tho? {.smaller auto-animate="true"}
+
+### TikTok for the marginalized
+
+::: incremental
+-   TikTok as a means for representation, community building, and creating counter-narratives for marginalized groups [@civila_social_2023; @vizcaino-verdu_thisismechallenge_2022]
+-   Also venue for extremist actors to target vulnerable audiences on the basis on experiences of marginalization [see @hartwig_monitoring_2023; @hohner2024]
+:::
+
+::: fragment
+**Little research on (positive) TikTok content production by (German) Muslims and how it relates to radicalization, given TikTok's platform characteristics.**
+:::
+
+::: footer
+Introduction
+:::
+
+## Reserach Questions {.smaller}
+
+> There remains a critical research gap regarding the content produced by German Muslims on TikTok and its impact on users. Major questions remain unanswered: **What content do German Muslims produce on TikTok, and how does this content lead to radicalization or not?** Against this backdrop, this dissertation examines the representation of German Muslims on TikTok and the consequences of this representation. The fundamental research questions that guide this study are:
+
+<ul style="list-style-type:none;">
+
+<li><strong>RQ1:</strong> What topics and issues do German Muslims address in their TikTok content?</li>
+
+<li><strong>RQ2:</strong> How does this content relate to religion, (anti-Muslim) grievances, and radical ideologies?</li>
+
+<li><strong>RQ3:</strong> How does the consumption of this content affect the values and attitudes of German Muslim TikTok users? Does it promote radicalization and/or act as a preventive force?</li>
+
+</ul>
+
+::: footer
+Introduction
+:::
+
+# Roadmap
+
+::: footer
+Roadmap
+:::
+
+## Table of conents
+
+-   [Theoretical Framework](#theoretical-framework)
+-   [Approach and Methodology](#approach-and-methodology)
+-   [Findings](#findings)
+-   [Limitations](#limitations)
+-   [Discussion](#discussion)
+
+::: footer
+Roadmap
+:::
+
+## Publications
+
+::::::::: columns
+:::: {.column width="33.33%"}
+::: {.fragment .slide-up}
+@el_sayed_exploring_2024
+
+![](diss_1.png){width="100%"}
+:::
+::::
+
+:::: {.column width="33.33%"}
+::: {.fragment .slide-up}
+@hotait_exploring_2024\
+![](diss_2.png){width="100%"}
+:::
+::::
+
+:::: {.column width="33.33%"}
+::: {.fragment .slide-up}
+@hotait_social_2025\
+![](diss_3.png){width="100%"}
+:::
+::::
+:::::::::
+
+::: footer
+Roadmap
+:::
+
+# Theoretical Framework {#theoretical-framework}
+
+::: footer
+Theory
+:::
+
+## What is Radicalization? {auto-animate="true"}
+
+> The adaptation of attitudes and behaviors that constitute "a significant deviation \[...\] from basic legal and political norms and values within a social system (society or state) that seek their (at least partial) abolition and replacement" [@beelmann_social-developmental_2020, 2]
+
+::: footer
+Theory
+:::
+
+## What is Radicalization? {.smaller auto-animate="true"}
+
+-   "The concept of radicalization as a source of confusion" [@sedgwick_concept_2010]
+-   "\[...\] readiness to engage in illegal and violent political action" [@moskalenko_measuring_2009, 240]
+-   "to be a radical is to reject the status quo, but not necessarily in a violent or even problematic manner. Some radicals conduct, support, or encourage terrorism, whilst many others do no such thing, and actively and often effectively agitate against it" [@bartlet_edge_2012, 2]
+-   "advocating sweeping political change, based on a conviction that the status quo is unacceptable while at the same time a fundamentally different alternative appears to be available to the radical" [@schmid_radicalisation_2013, 8]
+
+::: footer
+Theory
+:::
+
+## Theoretical Framework {.smaller auto-animate="true"}
+
+### The common sense
+
+```{mermaid}
+%%| fig-width: 6
+
+flowchart LR
+    Content --> Radicalization
+```
+
+-   Exposure to extremist content potentially leads to radicalization [@hassan_exposure_2018]
+
+-   One mechanism cited is information provision [@molmen_mechanisms_2021]
+
+-   "a grievance, a culprit, and a method" [@kruglanski_psychology_2014, 382]
+
+-   Opposite should be possible in theory as well
+
+    -   Media diets and the "echo chamber" [@dubois_echo_2018]
+
+    -   Diversity of ideas and dogmatism [@hunsberger_religious_1994; @kruglanski_psychology_2004]
+
+    -   **Practitioners**
+
+::: footer
+Theory
+:::
+
+------------------------------------------------------------------------
+
+## Theoretical Framework {.smaller auto-animate="true"}
+
+### Algorithmic curation
+
+```{mermaid}
+%%| fig-width: 9
+flowchart LR
+    Algorithm --> Content
+    Content --> Radicalization
+```
+
+-   **No exposure without recommendation**
+
+-   Recommendation algorithms or systems are designed to "generate meaningful recommendations to a collection of users for items or products that might interest them" [@melville_recommender_2017]
+
+-   Tiktok: Based on interests, usage, interaction patterns, settings etc. [@tiktok_how_2020]
+
+::: footer
+Theory
+:::
+
+------------------------------------------------------------------------
+
+## Theoretical Framework {.smaller auto-animate="true"}
+
+### The "how" question
+
+```{mermaid}
+%%| fig-width: 9
+flowchart LR
+    Algorithm --> Content
+    Content --> Engagement
+    Engagement --> Radicalization
+```
+
+-   TikTok is somewhat based on "voluntary" consumption (ForYou-Page)
+
+-   TikTok's logic of content production, consumption, interaction, and visibility [@abbasi_tiktok_2023; @abidin_mapping_2020; @barta_constructing_2021; @bhandari_whys_2022; @schellewald_understanding_2023; @vaterlaus_tiktok_2021]
+
+-   Factors such as relatability, authenticity, humor, controversy, and even video length play a critical role in driving user engagement
+
+-   Sound, music, visual effects, and the overall video production itself has a significant impact on how engaging and watchable a video is [@cheng_like_2023; @ling_slapping_2022; @schellewald_understanding_2023]
+
+::: footer
+Theory
+:::
+
+------------------------------------------------------------------------
+
+## Theoretical Framework {.smaller auto-animate="true"}
+
+### Persuasive power
+
+```{mermaid}
+%%| fig-width: 9
+flowchart LR
+    Algorithm --> Content
+    Content --> Engagement
+    Content --> Persuasibility
+    Persuasibility --> Engagement
+    Engagement --> Radicalization
+    Persuasibility --> Radicalization
+```
+
+-   **Media content must be persuasive to cause attitude change**
+
+-   @slater_television_2006, 238: engrossing narratives or characters, perceived similarities (cognitive), sharing emotions and experiences (affective)
+
+-   @polletta_when_2020, 4: The power of stories to mobilize a recipient "lies in their ability to elicit empathy for the protagonist and, as a result, support for the larger cause" (4) and **victim effect**
+
+::: footer
+Theory
+:::
+
+------------------------------------------------------------------------
+
+## Theoretical Framework {.smaller auto-animate="true"}
+
+### Psycho-social context
+
+```{mermaid}
+%%| fig-width: 9
+flowchart LR
+    Context -.-> Algorithm
+    Context -.-> Persuasibility
+    Context -.-> Engagement
+    Context -.-> Radicalization
+
+    Algorithm --> Content
+    Content --> Engagement
+    Content --> Persuasibility
+    Persuasibility --> Engagement
+    Engagement --> Radicalization
+    Persuasibility --> Radicalization
+```
+
+-   Demopgrahic, individual, micro-, and macro-environmental factors affect risk towards radicalization [@beelmann_social-developmental_2020; @campelo_who_2018, @emmelkamp_risk_2020]
+
+-   **Victimization and marginalization a central facilitator**
+
+-   Thus, psycho-social contextual factors influence the susceptibility to radicalization, the potential of (victim) narratives to persuade, the willingness to get involved, as well as the content suggested by both personal/shared interests.
+
+::: footer
+Theory
+:::
+
+# Approach and Methodology {#approach-and-methodology}
+
+::: footer
+Methods
+:::
+
+## Recap: Research Questions
+
+<ul style="list-style-type:none;">
+
+<li><strong>RQ1:</strong> What topics and issues do German Muslims address in their TikTok content?</li>
+
+<li><strong>RQ2:</strong> How does this content relate to religion, (anti-Muslim) grievances, and radical ideologies?</li>
+
+<li><strong>RQ3:</strong> How does the consumption of this content affect the values and attitudes of German Muslim TikTok users? Does it promote radicalization and/or act as a preventive force?</li>
+
+</ul>
+
+::: footer
+Methods
+:::
+
+## Overall appraoch
+
+-   Examining both positive and negative representations of Muslims on the platform.
+-   Integrating qualitative-hermeneutical and quantitative methodologies for a comprehensive analysis.
+-   Investigating the content production and consumption side of TikTok.
+-   Applying gendered approaches to compare and highlight the experiences of male and, particularly, female Muslim TikTok users.
+
+::: footer
+Methods
+:::
+
+## Research Design: RQ 1 & 2 {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+### Paper 1
+
+-   In-depth qualitative analysis of Female Muslim TikTok accounts\
+-   32 accounts, 320 videos (10 random videos)\
+-   Snowball sampling\
+-   Deductive coding framework (aspects to be coded)\
+-   Topics, video formats, and content types\
+-   Inductive coding process (content)\
+:::
+
+::: {.column .fragment width="50%"}
+### Paper 2
+
+-   Mixed-method analysis of German Islamic TikTok accounts\
+-   43 accounts, 2983 videos (all videos)\
+-   Snowball sampling plus addition from existing research\
+-   Theory derived (anti-)radicalism indicators\
+-   Inductive coding of topics\
+:::
+:::::
+
+::: footer
+Methods
+:::
+
+## Research Design: RQ 3 {.smaller}
+
+### Paper 3
+
+-   Field-experiment with 99 German Muslim participants
+-   14-day-intervention with TikTok accounts with differing content
+-   Prior and posterior survey on extremism and demography
+-   Data donations of user data
+-   2 Treatment groups, 1 Control group
+-   Descriptive: Uni- and bivariate analysis
+-   Multivariate: Changes in willingness to engage in violence or illegal action given discrimination and social exclusion
+-   Before and after intervention, between groups
+-   $\text{DiD} = \left( E[Y_{post} \mid T=1] - E[Y_{pre} \mid T=1] \right) - \left( E[Y_{post} \mid T=0] - E[Y_{pre} \mid T=0] \right)$
+
+::: footer
+Methods
+:::
+
+------------------------------------------------------------------------
+
+![](rapotik_research_pic.png)
+
+# Findings {#findings}
+
+::: footer
+Findings
+:::
+
+## Topics
+
+:::::: panel-tabset
+### Paper 1 {.smaller}
+
+::: {style="max-height: 300px; overflow-y: auto; font-size: 0.70em"}
+| Main Topic                                     | n   |
+|------------------------------------------------|-----|
+| Personal and Social Life                       | 103 |
+| Beauty, Style, and Fashion                     | 70  |
+| Promotion, Tips, Commerce, Inspiration         | 62  |
+| Religious and Theological Topics and Knowledge | 59  |
+| Social Justice and Political Advocacy          | 50  |
+| Hijab and Life as a Hijabi                     | 39  |
+| Lived Religion                                 | 36  |
+| Self(re-)presentation                          | 14  |
+| MISC                                           | 11  |
+| (Post)Migration                                | 10  |
+:::
+
+### Paper 2-1 {.smaller}
+
+::: {style="max-height: 300px; overflow-y: auto; font-size: 0.70em"}
+| Indicator | Total | Pro\* (Count) | Anti\* (Count) | Description (Pro\*) |
+|----------|----------|----------|----------|-----------------------------------|
+| Victimization | 150 | 150 | 0 | Victimization of Muslims/Muslim nations |
+| Merciless Theology | 150 | 22 | 128 | Vengeful theology, no error tolerance |
+| Monism | 47 | 24 | 23 | Only one correct interpretation of Islam |
+| Activism | 19 | 19 | 0 | Promotion of legal political activism |
+| Emancipation | 19 | 16 | 3 | Emancipation of people/groups, rights to education |
+| Interfaith | 17 | 15 | 2 | Interfaith cohesion, respect, collaboration |
+| Delegitimization | 15 | 15 | 0 | Rejection of democratic legitimacy and political institutions |
+| Closure | 11 | 3 | 8 | Exclusion of differing Muslims from social life |
+| Sectarianism | 10 | 9 | 1 | Denigration of Islamic sects, Takfirism |
+| Revisionism | 8 | 8 | 0 | Call for (re)establishment of Caliphate or Islamic dynasties |
+| Dehumanization | 7 | 3 | 4 | Denying humanity of others, harsh insults |
+| Dichotomization | 5 | 4 | 1 | Dividing world into friend/foe groups |
+| Violence | 2 | 0 | 2 | Use of physical violence for political/religious goals |
+:::
+
+### Paper 2-2 {.smaller}
+
+::: {style="max-height: 300px; overflow-y: auto; font-size: 0.70em"}
+| Topic | Count | Content |
+|------------|------------|-------------------------------------------------|
+| Advocacy | 1144 | Religious Advocacy, Reminders, Teachings, etc. |
+| Lifestyle | 593 | Clothing, Food, Travel, Music, Dance |
+| Kinship | 385 | Partnership, Family Relations |
+| Morality | 295 | Moral Constitution/Morality of Society and People |
+| Permissibility | 272 | What is allowed/not allowed in Islam (haram/halal) |
+| Motivation | 206 | Empowering people, Spiritual support, Encouragement |
+| History | 165 | Stories from History, History as a topic |
+| Ramadan | 147 | Ramadan and Fasting |
+| Afterlife | 144 | Death, Heaven, Hell |
+| Gender | 124 | Gender Relations |
+| Headscarf | 110 | Hijab, Headscarf, Veiling |
+| Conversion | 73 | Converts’ Stories, Conversion to Islam |
+| Western hypocrisy | 68 | Hypocrisy of the West/Western countries towards Muslims compared to others |
+| Education | 65 | Education (Personal, School, etc.) |
+| Shirk | 60 | Monotheism (versus Polytheism) |
+| Comedy | 53 | Funny and Humoristic Videos |
+| Media | 51 | Media Entities, Reports, Outlets as a Topic |
+| Crime | 41 | Crime, Criminality, Delinquency |
+| Discrimination | 41 | Discrimination, Racism |
+| Middle East | 38 | Israel–Palestine Conflict |
+| Business | 25 | Finance, How to make Money |
+| Rap | 18 | Rap Music and Personalities |
+| Ijma | 13 | Islamic Jurisprudence given from consensus |
+| Role models | 13 | Islamic and Popcultural Role Models |
+:::
+::::::
+
+::: footer
+Findings
+:::
+
+## Radicalism
+
+::::: panel-tabset
+### Grievance 1
+
+::: {style="max-height: 300px; overflow-y: auto; font-size: 0.70em"}
+| Radicalism Indicator | Count | Topic             | Count |
+|----------------------|-------|-------------------|-------|
+| Activism             | 9     | Western hypocrisy | 52    |
+| Delegitimization     | 6     | Media             | 30    |
+| Interfaith harmony   | 5     | Headscarf         | 30    |
+| Dichotomization      | 2     | Middle East       | 23    |
+| Emancipation         | 2     | Crime             | 20    |
+| Revisionism          | 2     | Discrimination    | 20    |
+| Anti dehumanization  | 1     | Advocacy          | 15    |
+| Dehumanization       | 1     | History           | 14    |
+| Monism               | 1     | Gender            | 12    |
+|                      |       | Morality          | 8     |
+|                      |       | Motivation        | 8     |
+|                      |       | Kinship           | 5     |
+|                      |       | Conversion        | 4     |
+|                      |       | Education         | 4     |
+|                      |       | Ramadan           | 3     |
+|                      |       | Lifestyle         | 2     |
+|                      |       | Shirk             | 2     |
+|                      |       | Permissibility    | 1     |
+|                      |       | Rap               | 1     |
+:::
+
+### Grievance 2
+
+![](victim%20bipartit-1.svg)
+
+### Religious 1
+
+::: {style="max-height: 300px; overflow-y: auto; font-size: 0.70em"}
+| Radicalism Indicator    | Count | Topic             | Count |
+|-------------------------|-------|-------------------|-------|
+| Anti merciless theology | 64    | Lifestyle         | 103   |
+| Victimization           | 15    | Motivation        | 91    |
+| Anti monism             | 9     | Kinship           | 63    |
+| Monism                  | 9     | Morality          | 43    |
+| Delegitimization        | 5     | Afterlife         | 41    |
+| Interfaith harmony      | 5     | Gender            | 30    |
+| Merciless theology      | 5     | Education         | 28    |
+| Sectarianism            | 4     | History           | 24    |
+| Activism                | 3     | Permissibility    | 24    |
+| Emancipation            | 3     | Shirk             | 19    |
+| Revisionism             | 3     | Ramadan           | 17    |
+| Anti closure            | 2     | Media             | 11    |
+| Dehumanization          | 2     | Conversion        | 10    |
+| Anti emancipation       | 2     | Business          | 9     |
+| Closure                 | 1     | Headscarf         | 7     |
+| Anti dichotomization    | 1     | Comedy            | 6     |
+| Dichotomization         | 1     | Rap               | 4     |
+| Anti interfaith harmony | 1     | Role models       | 4     |
+| Anti sectarianism       | 1     | Western hypocrisy | 4     |
+|                         |       | Crime             | 3     |
+|                         |       | Discrimination    | 2     |
+|                         |       | Ijma              | 2     |
+|                         |       | Middle East       | 1     |
+:::
+
+### Religious 2
+
+![](bipartite-advoc-1.svg)
+:::::
+
+::: footer
+Findings
+:::
+
+## Social Exclusion and Radicalization
+
+::: {style="max-height: 500px; overflow-y: auto; font-size: 0.70em"}
+| Characteristic | Survey (n=33) | Control (n=32) | Treatment (n=34) |
+|--------------------------|---------------|---------------|---------------|
+| **Age, mean (sd)** | 30.1 (10.4) | 31.8 (9.1) | 31.3 (10) |
+| **Age, median** | 28 | 29.5 | 30.5 |
+| **Sex, n (%)** |  |  |  |
+| Male | 14 (42.4%) | 8 (25%) | 11 (32.4%) |
+| Female | 19 (57.6%) | 24 (75%) | 23 (67.6%) |
+| **Migration Background, n (%)** |  |  |  |
+| No | 6 (18.2%) | 1 (3.1%) | 6 (17.6%) |
+| Yes | 27 (81.8%) | 31 (96.9%) | 28 (82.4%) |
+| **Origin, n (%)** |  |  |  |
+| Turkish | 15 (45.5%) | 18 (56.2%) | 15 (44.1%) |
+| Arabic speaking | 10 (30.3%) | 10 (31.2%) | 7 (20.6%) |
+| Persian speaking | 0 (0%) | 3 (9.4%) | 5 (14.7%) |
+| Other | 2 (6.1%) | 0 (0%) | 2 (5.9%) |
+| **Professional Education, n (%)** |  |  |  |
+| None | 1 (3%) | 1 (3.1%) | 1 (2.9%) |
+| Other (not specified) | 6 (18.2%) | 5 (15.6%) | 9 (26.5%) |
+| Non-formal/Entry-Level Training | 0 (0%) | 2 (6.2%) | 1 (2.9%) |
+| Vocational Education | 10 (30.3%) | 16 (50%) | 15 (44.1%) |
+| Higher Education | 16 (48.5%) | 8 (25%) | 8 (23.5%) |
+| **Religiosity \[10–1\], mean (sd)** | 3.5 (2) | 3 (2) | 3.2 (1.8) |
+:::
+
+::: footer
+Findings
+:::
+
+## Scenarios {.smaller}
+
+1.  “In Germany, laws are passed that I religiously disagree with, but they do not force me to commit sinful actions”.
+2.  “In Germany, laws are passed that I religiously disagree with and that force me to commit sinful actions”.
+3.  “In Germany, laws are passed that result in Muslims being excluded from resources, professions, and institutions”.
+4.  “Muslims are predominantly discriminated against in German society”.
+5.  “I observe that Muslims in Germany are, overall, practicing Islam less and less”.
+6.  “German society pressures me to act against my religious beliefs”.
+
+The response options were: Strongly agree, somewhat agree, neither agree nor disagree, somewhat disagree, strongly disagree, don’t know and no answer
+
+::: footer
+Findings
+:::
+
+## Means
+
+-   Civil disobedience, which includes taking part in an unauthorised protest, occupying houses, factories or offices, causing a real ruckus at a demonstration, even if some things are damaged, and taking part in a traffic blockade.
+-   Violence, which includes fighting for a cause, even if it involves violence against people and intimidation of political opponents.
+
+::: footer
+Findings
+:::
+
+## Descriptive
+
+```{r}
+readRDS("third_1")
+```
+
+::: footer
+Findings
+:::
+
+## Descriptive
+
+```{r}
+#| fig-width: 12
+#| fig-height: 6
+
+readRDS("third_2")
+```
+
+::: footer
+Findings
+:::
+
+## Multivariate
+
+::: {style="text-align: center;"}
+<img src="new_effect_plot.svg" style="max-width: 45%; height: auto;"/>
+:::
+
+::: footer
+Findings
+:::
+
+## Contextual Evidence {.smaller}
+
+| Video | Seen (Treatment) | Watched Fully (Treatment) | Remember Content (Treatment) | Agree (Treatment) | Agree (Survey) |
+|------------|------------|------------|-------------|------------|------------|
+| 1 | 16 (47.1%) | 9 (26.5%) | 13 (38.2%) | 8 (23.5%) | 15 (45.5%) |
+| 2 | 16 (47.1%) | 9 (26.5%) | 9 (26.5%) | 3 (8.8%) | 15 (45.5%) |
+| 3 | 18 (52.9%) | 13 (38.2%) | 9 (26.5%) | 2 (5.9%) | 10 (30.3%) |
+| 4 | 13 (38.2%) | 5 (14.7%) | 3 (8.8%) | 2 (5.9%) | 6 (18.2%) |
+| 5 | 9 (26.5%) | 4 (11.8%) | 3 (8.8%) | 1 (2.9%) | 7 (21.2%) |
+| 6 | 7 (20.6%) | 3 (8.8%) | 2 (5.9%) | 0 (0%) | 5 (15.2%) |
+
+::: footer
+Findings
+:::
+
+# Discussion {#discussion}
+
+::: footer
+Findings
+:::
+
+# RQ 1 & 2
+
+::: footer
+Findings
+:::
+
+## General Content Characteristics
+
+-   **Wide range of topics:** Personal/social life (family, relationships), beauty, fashion, self-care, food, DIY, lifestyle.
+-   **Platform norms:** Content reflects TikTok’s logic—entertainment-driven, focused on engagement, authenticity, relatability, and self-commodification.
+-   **Creative strategies:** Use of trends, formats, humour, storytelling, and reciprocity with users
+
+::: footer
+Findings
+:::
+
+## Religious and Advocacy Content {.smaller}
+
+-   **Religious expression:** Covers theology, hijab, lived religion, moral issues, and guidance on family and gender roles.
+-   **Activism and advocacy:** Creators challenge stereotypes and raise awareness about racism, discrimination, and exclusion.
+-   **Empowerment:** Content empowers Muslim women and provides visibility, agency, and a third space for self-representation.
+-   **Role model function:** Creators act as informal educators, especially where formal religious representation is lacking.
+-   **Two strains of Muslim TikTok:** Religious vs Political Advocacy
+
+::: footer
+Findings
+:::
+
+## Algorithmic Affordances and Challenges {.smaller}
+
+-   **Low-barrier visibility:** TikTok’s algorithm enables even small accounts to gain traction, increasing access for marginalized voices.
+-   **Risk of exposure:** Increased visibility also makes creators more vulnerable to hate and algorithmic limitations (entertainment bias, limited reach).
+-   **Platform moderation:** Potential extremist content may be removed or obscured through moderation; some content uses coded language ("algospeak") to evade filters.
+
+::: footer
+Discussion
+:::
+
+## Radical Ideology Dynamics {.smaller}
+
+-   **Grievance-based narratives:** Victimhood (e.g., media bias, Islamophobia, geopolitical injustices) is central to content that may foster radicalisation.
+-   **Three-part radicalization**:
+    -   Grievance: Structural victimhood of Muslims.
+    -   Culprit: Systemic oppression by Western institutions/media.
+    -   Method: Need for radical change, sometimes framed as religious duty.
+-   **Contrasting outcomes**: While some content promotes justice and pluralism, others undermine socio-political legitimacy (e.g. caliphate advocacy).
+-   **Religious vs Political**: Muslim as a Believer vs. Muslim as a Member
+
+::: footer
+Discussion
+:::
+
+## Dual Role of TikTok Content
+
+-   **Integration and belonging:** Content supports social cohesion by equipping users to navigate diverse societies.
+-   **Challenge and critique:** Content also mobilizes against injustice, expressing dissatisfaction and demanding change.
+-   **Extremism hijacks these roles**
+
+::: footer
+Discussion
+:::
+
+## Central Methodological Limitations
+
+-   **Selection bias:** Focus on popular accounts may miss fringe or extremist content or "non-performing" Muslims
+-   **Visibility bias:** Popular content may reflect mainstream-compatible themes; less visible radical content may still reach users before moderation.
+
+::: footer
+Discussion
+:::
+
+# RQ 3
+
+::: footer
+Discussion
+:::
+
+## Summary
+
+-   **Overall resilience:** Participants’ attitudes remained largely stable over the 14-day period.
+-   Slight increase in violent attitudes in the treatment group, but changes were not statistically significant.
+-   Democracy support remained high across all groups.
+-   Religiosity and older age correlated with lower likelihood of attitude change toward violence.
+
+::: footer
+Discussion
+:::
+
+## Positive signals: Control Group
+
+-   Despite reporting highest post-intervention levels of perceived discrimination, the control group showed:
+    -   Minimal change in political attitudes.
+    -   No increase in support for violence—some even showed slight decreases.
+    -   Suggests preventive potential of positive TikTok content
+    
+::: footer
+Discussion
+:::
+
+## Contextual Insights {.smaller}
+
+-   Swipe culture moderates radicalization risks:
+    -   Most participants did not watch full videos.
+    -   Few remembered or agreed with radical messages.
+    -   Interest and attention span are crucial for engagement and potential influence.
+-   **Likes ≠ agreement:** Some used likes to acknowledge grievances, not endorse ideologies.
+-   **Engagement data:** Most videos viewed only briefly (5 seconds to \~20 seconds), meaning radical calls-to-action at the end were often missed.
+
+::: footer
+Discussion
+:::
+
+## Case Insight
+
+-   A participant who liked/saved all radical videos later reported being shocked rather than persuaded and showed less radical views after the study.
+-   Some participants consumed up to 465 videos/day.
+-   Radical content appears as a minority in a flood of entertainment content, questioning how much exposure is needed for influence to occur.
+
+::: footer
+Discussion
+:::
+
+## Limitations {#limitations .smaller}
+
+-   **Sample size limited**; a larger N would improve detection of rare radicalization effects.
+-   Study duration and number of videos/accounts should be expanded.
+-   Unobserved heterogeneity likely influenced outcomes (e.g., trauma, personal grievances, psychological dispositions).
+-   Contextual events (e.g., Gaza war) may have affected results independently of the intervention.
+-   Social desirability bias affects self-reported data on radical beliefs/actions.
+
+::: footer
+Discussion
+:::
+
+## About the N
+
+::::: columns
+::: {.column width="50%"}
+![](power_plot.png)
+:::
+
+::: {.column width="50%"}
+![](power_plot_paired.png)
+:::
+:::::
+
+::: footer
+Discussion
+:::
+
+## About the N
+
+@lakens2022, 2
+
+![](sample_size.png)
+
+::: footer
+Discussion
+:::
+
+## About the N
+
+![](kosten.png)
+
+::: footer
+Discussion
+:::
+
+## Outlook {.smaller}
+
+- **Radicalization remains politicised and evolving**, especially through social media. Muslims continue to be disproportionately targeted in security discourses, often framed as sources of risk in connection with migration.
+
+- This dissertation addresses that context, offering a **critical study of Muslim TikTok**, combining qualitative and experimental methods to understand how content relates to grievance, identity, and radicalization.
+
+- Findings suggest **overall resilience** among users, alongside evidence of **context-dependent content engagement**, with sociocultural meaning often misinterpreted (e.g., likes ≠ endorsement).
+
+- **Qualitative research is essential**: it uncovers meaning, intent, and user practices, especially where quantitative models cannot fully explain engagement patterns.
+
+- **Digital phenomena must be studied on their own terms**, using adaptive, platform-sensitive methods that reflect the realities of algorithmic content delivery.
+
+::: footer
+Discussion
+:::
+
+## Outlook {.smaller}
+
+- **Computational methods** (e.g., LLMs, text analysis, user data donations) are crucial for understanding actual exposure and platform effects, allowing measurement beyond content production.
+
+- Future research must shift toward the **consumer perspective**, tracing how users interact with recommended content, not just what is posted.
+
+- Scholars must **navigate between Big Tech optimism and alarmism**—recognising digital spaces as both empowering and potentially harmful.
+
+- Research must remain **critical, reflexive, and ethically aware**: distinguishing between real threats and racialised narratives, and challenging the **securitisation of Muslims** in both policy and scholarship.
+
+- Ultimately, radicalization research must ask: what do we label as “objectionable,” under what conditions, and with what consequences?
+
+::: footer
+Discussion
+:::
+
+## References
+
+::: {#refs}
+:::
+
+::: footer
+References
+:::
