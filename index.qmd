@@ -231,34 +231,16 @@ Introduction
 ::::
 
 ::: {.column width="50%"}
+<div class="fragment" style="color:#DF7E50">
 <ul>
-
-<li class="fragment" style="color:#DF7E50">
-
-***Use of social media, for:***
-
-</li>
-
-<li class="fragment" style="color:#DF7E50">
-
-Community building and knowledge exchange
-
-</li>
-
-<li class="fragment" style="color:#DF7E50">
-
-Creating counter-narratives, mobilization, and activism
-
-</li>
-
-<li class="fragment" style="color:#DF7E50">
-
-**As a consequence of marginalization!**
-
-</li>
-
+<li>***Use of social media, for:***</li>
+<li>Community building and knowledge exchange</li>
+<li>Creating counter-narratives, mobilization, and activism</li>
+<li>**As a consequence of marginalization!**</li>
 </ul>
+</div>
 :::
+
 ::::::
 
 ::: footer
@@ -1095,10 +1077,53 @@ readRDS("third_2")
 Findings
 :::
 
-## Multivariate
+## Multivariate {.smaller}
 
-::: {style="text-align: center;"}
-<img src="new_effect_plot.svg" style="max-width: 45%; height: auto;"/>
+:::::: columns
+:::: {.column width="50%"}
+<img src="new_effect_plot.svg" style="max-width: 90%; height: auto;"/>
+::::
+
+:::: {.column width="50%"}
+
+- **Covariates:** treatment group, gender, age, professional education level, religiosity, and number of aspects on which participants felt discriminated against in the past 12 months (Discrimination sum).
+  + a: Scenarios agreed with
+  + b: Scenarios civil obedience 
+  + c: Scenarios violence
+- **Violence**: TikTok Group $\hat{y} = 0.12$
+- **Difference**: $0.18$ to $0.27$
+
+:::::
+
+:::::: 
+
+::: footer
+Findings
+:::
+
+## Regression table ($\beta$){ .smaller}
+
+::: {style="max-height: 500px; overflow-y: auto; font-size: 0.70em"}
+|  | Discrimination (1) | Civil Disob. (2) | Violence (3) |
+| :-- | :--: | :--: | :--: |
+| **Survey (Ref: Control)** | -0.532 <br> (0.422) | -0.404 <br> (0.290) | -0.085 <br> (0.181) |
+| **Treatment (Ref: Control)** | -0.455 <br> (0.400) | -0.442 <br> (0.274) | 0.184 <br> (0.171) |
+| **Female (Ref: Male)** | -0.162 <br> (0.360) | 0.270 <br> (0.247) | -0.106 <br> (0.154) |
+| **Age** | -0.038* <br> (0.020) | 0.002 <br> (0.014) | -0.016* <br> (0.008) |
+| **Vocational Education** <br> (Ref: None, other, or entry-level) | 0.945** <br> (0.445) | 0.046 <br> (0.305) | 0.098 <br> (0.190) |
+| **Higher Education** <br> (Ref: None, other, or entry-level) | 1.391*** <br> (0.452) | -0.080 <br> (0.310) | 0.098 <br> (0.193) |
+| **Religiosity** | 0.057 <br> (0.086) | 0.139** <br> (0.059) | -0.031 <br> (0.037) |
+| **Discrimination (sum)** | -0.054 <br> (0.119) | -0.075 <br> (0.082) | -0.086* <br> (0.051) |
+| **Constant** | 0.985 <br> (0.842) | -0.501 <br> (0.577) | 0.698* <br> (0.360) |
+|  |  |  |  |
+| **Observations** | 99 | 99 | 99 |
+| **R²** | 0.125 | 0.105 | 0.092 |
+| **Adjusted R²** | 0.047 | 0.025 | 0.011 |
+| **Residual Std. Error (df = 90)** | 1.608 | 1.102 | 0.688 |
+| **F Statistic (df = 8; 90)** | 1.607 | 1.316 | 1.136 |
+
+**Note:** *p* < 0.1; **p** < 0.05; ***p*** < 0.01
+
 :::
 
 ::: footer
@@ -1182,7 +1207,8 @@ Discussion
 
 -   **Integration and belonging:** Content supports social cohesion by equipping users to navigate diverse societies.
 -   **Challenge and critique:** Content also mobilizes against injustice, expressing dissatisfaction and demanding change.
--   **Extremism hijacks these roles**
+-   **Extremists hijacks these roles**
+- **"The Representation Gap"**
 
 ::: footer
 Discussion
